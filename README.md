@@ -20,9 +20,9 @@ This tool provides a command-line interface for encrypting and decrypting files 
 $ cargo run encrypt <input_file> [<output_file>] [<key_file>]
 ```
 
-<input_file>: Path to the file you want to encrypt.
-<output_file>: (Optional) Path to save the encrypted file. If not provided, a default name will be used.
-<key_file>: (Optional) Path to the key file. If not provided, a new key will be generated.
+- `<input_file>`: Path to the file you want to encrypt.
+- `<output_file>`: (Optional) Path to save the encrypted file. If not provided, a default name will be used.
+- `<key_file>`: (Optional) Path to the key file. If not provided, a new key will be generated.
 
 ## Decription
 
