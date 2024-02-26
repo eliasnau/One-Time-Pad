@@ -39,3 +39,23 @@ pub fn generate_or_read_key(key_file_path: &str, input_file_size: usize) -> Vec<
         }
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_generate_or_read_key() {
+        let key_file_path = "test_key.txt";
+        let input_file_size = 10;
+
+        let result = generate_or_read_key(key_file_path, input_file_size);
+
+        match read_file_to_variable(key_file_path) {
+            Ok(existing_key) => assert_eq!(result, existing_key),
+            Err(_) => panic!("Reading key file failed."),
+        }
+
+        std::fs::remove_file(key_file_path).unwrap();
+    }
+}
