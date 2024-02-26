@@ -1,5 +1,3 @@
-// src/lib.rs
-
 use std::fs;
 use std::io;
 
